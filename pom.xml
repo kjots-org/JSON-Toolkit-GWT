@@ -42,6 +42,8 @@
   <modules>
     <module>maven-parent</module>
     
+    <module>json-content-gwt</module>
+    
     <module>json-object/gwt</module>
     <module>json-object/gwt-pre-2.2</module>
   </modules>

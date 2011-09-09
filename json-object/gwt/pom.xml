@@ -43,7 +43,7 @@
   <dependencies>
     <dependency>
       <groupId>org.kjots.json-toolkit-gwt</groupId>
-      <artifactId>org.kjots.json-toolkit-gwt.json-content.gwt</artifactId>
+      <artifactId>org.kjots.json-toolkit-gwt.json-content-gwt</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
     </dependency>
