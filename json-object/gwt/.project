@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>org.kjots.json-toolkit.json-object.gwt</name>
+	<name>org.kjots.json-toolkit-gwt.json-object.gwt</name>
 	<comment></comment>
 	<projects>
-		<project>org.kjots.json-toolkit.maven-parent</project>
-    <project>org.kjots.json-toolkit.json-content.gwt</project>
-    <project>org.kjots.json-toolkit.json-object.shared</project>
+		<project>org.kjots.json-toolkit-gwt.maven-parent</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

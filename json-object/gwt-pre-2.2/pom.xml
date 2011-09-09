@@ -20,17 +20,17 @@
   <modelVersion>4.0.0</modelVersion>
   
   <parent>
-    <groupId>org.kjots.json-toolkit</groupId>
-    <artifactId>org.kjots.json-toolkit.maven-parent</artifactId>
+    <groupId>org.kjots.json-toolkit-gwt</groupId>
+    <artifactId>org.kjots.json-toolkit-gwt.maven-parent</artifactId>
     <version>1.2-SNAPSHOT</version>
     <relativePath>../../maven-parent/pom.xml</relativePath>
   </parent>
   
-  <artifactId>org.kjots.json-toolkit.json-object.gwt-pre-2.2</artifactId>
+  <artifactId>org.kjots.json-toolkit-gwt.json-object.gwt-pre-2.2</artifactId>
   
   <packaging>jar</packaging>
   
-  <name>JSON Toolkit - JSON Object - GWT (pre 2.2)</name>
+  <name>JSON Toolkit GWT - JSON Object - GWT (pre 2.2)</name>
   
   <properties>
     <version.gwt>2.1.1</version.gwt>
@@ -47,14 +47,14 @@
   
   <dependencies>
     <dependency>
-      <groupId>org.kjots.json-toolkit</groupId>
-      <artifactId>org.kjots.json-toolkit.json-object.shared</artifactId>
+      <groupId>org.kjots.json-toolkit-gwt</groupId>
+      <artifactId>org.kjots.json-toolkit-gwt.json-content.gwt</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.kjots.json-toolkit</groupId>
-      <artifactId>org.kjots.json-toolkit.json-content.gwt</artifactId>
+      <artifactId>org.kjots.json-toolkit.json-object.shared</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
     </dependency>
@@ -169,52 +169,6 @@
             <configuration>
               <productionMode>true</productionMode>
             </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <version>${version.plugin.maven-source}</version>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-javadoc-plugin</artifactId>
-        <version>${version.plugin.maven-javadoc}</version>
-        <configuration>
-          <notimestamp>true</notimestamp>
-          <offlineLinks>
-            <offlineLink>
-              <url>http://json-toolkit.googlecode.com/hg/json-object/shared/doc/api/</url>
-              <location>${basedir}/../shared/doc/api/</location>
-            </offlineLink>
-            <offlineLink>
-              <url>http://json-toolkit.googlecode.com/hg/json-content/shared/doc/api/</url>
-              <location>${basedir}/../../json-content/shared/doc/api/</location>
-            </offlineLink>
-          </offlineLinks>
-          <links>
-            <link>http://google-guice.googlecode.com/svn/tags/3.0/javadoc/</link>
-            <link>http://google-web-toolkit.googlecode.com/svn/javadoc/2.1/</link>
-            <link>http://google-gin.googlecode.com/svn/tags/1.5.0-pre-gwt-2.2/javadoc/</link>
-          </links>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>jar</goal>
-            </goals>
           </execution>
         </executions>
       </plugin>

@@ -20,17 +20,17 @@
   <modelVersion>4.0.0</modelVersion>
   
   <parent>
-    <groupId>org.kjots.json-toolkit</groupId>
-    <artifactId>org.kjots.json-toolkit.maven-parent</artifactId>
+    <groupId>org.kjots.json-toolkit-gwt</groupId>
+    <artifactId>org.kjots.json-toolkit-gwt.maven-parent</artifactId>
     <version>1.2-SNAPSHOT</version>
     <relativePath>../../maven-parent/pom.xml</relativePath>
   </parent>
   
-  <artifactId>org.kjots.json-toolkit.json-object.gwt</artifactId>
+  <artifactId>org.kjots.json-toolkit-gwt.json-object.gwt</artifactId>
   
   <packaging>jar</packaging>
   
-  <name>JSON Toolkit - JSON Object - GWT</name>
+  <name>JSON Toolkit GWT - JSON Object - GWT</name>
   
   <properties>
     <package>org.kjots.json.object</package>
@@ -42,14 +42,14 @@
   
   <dependencies>
     <dependency>
-      <groupId>org.kjots.json-toolkit</groupId>
-      <artifactId>org.kjots.json-toolkit.json-object.shared</artifactId>
+      <groupId>org.kjots.json-toolkit-gwt</groupId>
+      <artifactId>org.kjots.json-toolkit-gwt.json-content.gwt</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.kjots.json-toolkit</groupId>
-      <artifactId>org.kjots.json-toolkit.json-content.gwt</artifactId>
+      <artifactId>org.kjots.json-toolkit.json-object.shared</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
     </dependency>
@@ -77,7 +77,7 @@
       <version>${version.javax.validation}</version>
       <classifier>sources</classifier>
       <scope>provided</scope>
-    </dependency>    
+    </dependency>
     <dependency>
       <groupId>com.google.gwt.inject</groupId>
       <artifactId>gin</artifactId>
