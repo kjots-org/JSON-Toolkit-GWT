@@ -3,8 +3,7 @@
 	<name>org.kjots.json-toolkit-gwt.json-object.gwt-pre-2.2</name>
 	<comment></comment>
 	<projects>
-		<project>org.kjots.json-toolkit-gwt.maven-parent</project>
-    <project>org.kjots.json-toolkit-gwt.json-object.gwt</project>
+    <project>org.kjots.json-toolkit-gwt.json-content-gwt</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
