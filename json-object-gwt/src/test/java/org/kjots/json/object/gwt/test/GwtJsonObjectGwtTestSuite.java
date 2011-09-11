@@ -20,7 +20,25 @@ import com.google.gwt.junit.tools.GWTTestSuite;
 import junit.framework.Test;
 import junit.framework.TestSuite;
 
-import org.kjots.json.object.gwt.test.impl.GwtJsonObjectImplGwtTestSuite;
+import org.kjots.json.object.gwt.client.GwtJsonObjectGeneratorAutoAdaptedPropertyGwtTest;
+import org.kjots.json.object.gwt.client.GwtJsonObjectGeneratorBooleanGwtTest;
+import org.kjots.json.object.gwt.client.GwtJsonObjectGeneratorExceptionGwtTest;
+import org.kjots.json.object.gwt.client.GwtJsonObjectGeneratorFunctionGwtTest;
+import org.kjots.json.object.gwt.client.GwtJsonObjectGeneratorGwtTest;
+import org.kjots.json.object.gwt.client.GwtJsonObjectGeneratorNumberGwtTest;
+import org.kjots.json.object.gwt.client.GwtJsonObjectGeneratorObjectGwtTest;
+import org.kjots.json.object.gwt.client.GwtJsonObjectGeneratorPrimitiveGwtTest;
+import org.kjots.json.object.gwt.client.GwtJsonObjectGeneratorStringGwtTest;
+import org.kjots.json.object.gwt.client.impl.GwtJsonArrayImplGwtTest;
+import org.kjots.json.object.gwt.client.impl.GwtJsonBooleanArrayImplGwtTest;
+import org.kjots.json.object.gwt.client.impl.GwtJsonBooleanMapImplGwtTest;
+import org.kjots.json.object.gwt.client.impl.GwtJsonNumberArrayImplGwtTest;
+import org.kjots.json.object.gwt.client.impl.GwtJsonNumberMapImplGwtTest;
+import org.kjots.json.object.gwt.client.impl.GwtJsonObjectArrayImplGwtTest;
+import org.kjots.json.object.gwt.client.impl.GwtJsonObjectImplGwtTest;
+import org.kjots.json.object.gwt.client.impl.GwtJsonObjectMapImplGwtTest;
+import org.kjots.json.object.gwt.client.impl.GwtJsonStringArrayImplGwtTest;
+import org.kjots.json.object.gwt.client.impl.GwtJsonStringMapImplGwtTest;
 
 /**
  * GWT JSON Object Test GWT Suite.
@@ -31,6 +49,106 @@ import org.kjots.json.object.gwt.test.impl.GwtJsonObjectImplGwtTestSuite;
  * @since 1.1
  */
 public class GwtJsonObjectGwtTestSuite extends GWTTestSuite {
+  /**
+   * GWT JSON Object Generator GWT Test Suite.
+   * <p>
+   * Created: 9th February 2011.
+   */
+  public static class GwtJsonObjectGeneratorGwtTestSuite extends GWTTestSuite {
+    /**
+     * Create the test suite.
+     *
+     * @return The test suite.
+     */
+    public static Test suite() {
+      GwtJsonObjectGeneratorGwtTestSuite suite = new GwtJsonObjectGeneratorGwtTestSuite();
+      
+      addTestSuites(suite);
+      
+      return suite;
+    }
+    
+    /**
+     * Add the test suites.
+     *
+     * @param suite The test suite.
+     */
+    public static void addTestSuites(TestSuite suite) {
+      suite.addTestSuite(GwtJsonObjectGeneratorGwtTest.class);
+      
+      suite.addTestSuite(GwtJsonObjectGeneratorPrimitiveGwtTest.class);
+      suite.addTestSuite(GwtJsonObjectGeneratorBooleanGwtTest.class);
+      suite.addTestSuite(GwtJsonObjectGeneratorNumberGwtTest.class);
+      suite.addTestSuite(GwtJsonObjectGeneratorStringGwtTest.class);
+      suite.addTestSuite(GwtJsonObjectGeneratorObjectGwtTest.class);
+      
+      suite.addTestSuite(GwtJsonObjectGeneratorAutoAdaptedPropertyGwtTest.class);
+      
+      suite.addTestSuite(GwtJsonObjectGeneratorFunctionGwtTest.class);
+      suite.addTestSuite(GwtJsonObjectGeneratorExceptionGwtTest.class);
+    }
+    
+    /**
+     * Construct a new GWT JSON Object Generator GWT Test Suite.
+     * <p>
+     * This constructor is declared <code>private</code> to prevent external
+     * instantiation.
+     */
+    private GwtJsonObjectGeneratorGwtTestSuite() {
+      super("GWT Json Object Generator GWT Test Suite");
+    }
+  }
+  
+  /**
+   * GWT JSON Object Implementation GWT Test Suite.
+   * <p>
+   * Created: 9th February 2011.
+   */
+  public static class GwtJsonObjectImplGwtTestSuite extends GWTTestSuite {
+    /**
+     * Create the test suite.
+     *
+     * @return The test suite.
+     */
+    public static Test suite() {
+      GwtJsonObjectImplGwtTestSuite suite = new GwtJsonObjectImplGwtTestSuite();
+      
+      addTestSuites(suite);
+      
+      return suite;
+    }
+    
+    /**
+     * Add the test suites.
+     *
+     * @param suite The test suite.
+     */
+    public static void addTestSuites(TestSuite suite) {
+      suite.addTestSuite(GwtJsonObjectImplGwtTest.class);
+      suite.addTestSuite(GwtJsonArrayImplGwtTest.class);
+      
+      suite.addTestSuite(GwtJsonBooleanArrayImplGwtTest.class);
+      suite.addTestSuite(GwtJsonNumberArrayImplGwtTest.class);
+      suite.addTestSuite(GwtJsonStringArrayImplGwtTest.class);
+      suite.addTestSuite(GwtJsonObjectArrayImplGwtTest.class);
+      
+      suite.addTestSuite(GwtJsonBooleanMapImplGwtTest.class);
+      suite.addTestSuite(GwtJsonNumberMapImplGwtTest.class);
+      suite.addTestSuite(GwtJsonStringMapImplGwtTest.class);
+      suite.addTestSuite(GwtJsonObjectMapImplGwtTest.class);
+    }
+    
+    /**
+     * Construct a new GWT JSON Object Implementation GWT Test Suite.
+     * <p>
+     * This constructor is declared <code>private</code> to prevent external
+     * instantiation.
+     */
+    private GwtJsonObjectImplGwtTestSuite() {
+      super("GWT Json Object Implementation GWT Test Suite");
+    }
+  }
+  
   /**
    * Create the test suite.
    *
