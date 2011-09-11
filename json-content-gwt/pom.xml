@@ -23,7 +23,7 @@
     <groupId>org.kjots.json-toolkit-gwt</groupId>
     <artifactId>org.kjots.json-toolkit-gwt.maven-parent</artifactId>
     <version>1.2-SNAPSHOT</version>
-    <relativePath>../../maven-parent/pom.xml</relativePath>
+    <relativePath>../maven-parent/pom.xml</relativePath>
   </parent>
   
   <artifactId>org.kjots.json-toolkit-gwt.json-content-gwt</artifactId>
@@ -33,6 +33,8 @@
   <name>JSON Toolkit GWT - JSON Content GWT</name>
   
   <properties>
+    <dir.unpacked-sources.json-content-shared>${project.build.directory}/unpacked-sources/json-content-shared</dir.unpacked-sources.json-content-shared>
+    
     <package>org.kjots.json.content</package>
     <package.path>org/kjots/json/content</package.path>
     
@@ -50,6 +52,35 @@
   </dependencies>
   
   <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>${version.plugin.maven-dependency}</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.kjots.json-toolkit</groupId>
+                  <artifactId>org.kjots.json-toolkit.json-content.shared</artifactId>
+                  <version>${project.version}</version>
+                  <classifier>sources</classifier>
+                  <outputDirectory>${dir.unpacked-sources.json-content-shared}</outputDirectory>
+                  <includes>${package.path}/shared/**/*.java</includes>
+                  <overWrite>true</overWrite>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    
     <resources>
       <resource>
         <directory>src/main/gwt</directory>
@@ -58,7 +89,7 @@
         </includes>
       </resource>
       <resource>
-        <directory>../shared/src/main/java</directory>
+        <directory>${dir.unpacked-sources.json-content-shared}</directory>
         <includes>
           <include>${package.path}/shared/**/*.java</include>
         </includes>
@@ -69,6 +100,6 @@
           <include>${package.path}/gwt/client/**/*.java</include>
         </includes>
       </resource>
-    </resources> 
+    </resources>
   </build>
 </project>
