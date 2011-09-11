@@ -52,6 +52,27 @@
   </dependencies>
   
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/gwt</directory>
+        <includes>
+          <include>${package.path}/**</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>${dir.unpacked-sources.json-content-shared}</directory>
+        <includes>
+          <include>${package.path}/shared/**/*.java</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>${package.path}/gwt/client/**/*.java</include>
+        </includes>
+      </resource>
+    </resources>
+    
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -80,26 +101,5 @@
         </executions>
       </plugin>
     </plugins>
-    
-    <resources>
-      <resource>
-        <directory>src/main/gwt</directory>
-        <includes>
-          <include>${package.path}/**</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>${dir.unpacked-sources.json-content-shared}</directory>
-        <includes>
-          <include>${package.path}/shared/**/*.java</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>src/main/java</directory>
-        <includes>
-          <include>${package.path}/gwt/client/**/*.java</include>
-        </includes>
-      </resource>
-    </resources>
   </build>
 </project>

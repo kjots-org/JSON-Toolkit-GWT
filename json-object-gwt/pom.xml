@@ -33,6 +33,9 @@
   <name>JSON Toolkit GWT - JSON Object GWT</name>
   
   <properties>
+    <dir.unpacked-sources.json-object-shared>${project.build.directory}/unpacked-sources/json-object-shared</dir.unpacked-sources.json-object-shared>
+    <dir.unpacked-sources.json-object-shared-test>${project.build.directory}/unpacked-sources/json-object-shared-test</dir.unpacked-sources.json-object-shared-test>
+    
     <package>org.kjots.json.object</package>
     <package.path>org/kjots/json/object</package.path>
     
@@ -108,7 +111,7 @@
         </includes>
       </resource>
       <resource>
-        <directory>../shared/src/main/java</directory>
+        <directory>${dir.unpacked-sources.json-object-shared}</directory>
         <includes>
           <include>${package.path}/shared/**/*.java</include>
         </includes>
@@ -129,7 +132,7 @@
         </includes>
       </testResource>
       <testResource>
-        <directory>../shared/src/test/java</directory>
+        <directory>${dir.unpacked-sources.json-object-shared-test}</directory>
         <includes>
           <include>${package.path}/shared/**/*.java</include>
         </includes>
@@ -137,6 +140,42 @@
     </testResources>
     
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>${version.plugin.maven-dependency}</version>
+        <executions>
+          <execution>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>unpack</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.kjots.json-toolkit</groupId>
+                  <artifactId>org.kjots.json-toolkit.json-object.shared</artifactId>
+                  <version>${project.version}</version>
+                  <classifier>sources</classifier>
+                  <outputDirectory>${dir.unpacked-sources.json-object-shared}</outputDirectory>
+                  <includes>${package.path}/shared/**/*.java</includes>
+                  <overWrite>true</overWrite>
+                </artifactItem>
+                <artifactItem>
+                  <groupId>org.kjots.json-toolkit</groupId>
+                  <artifactId>org.kjots.json-toolkit.json-object.shared</artifactId>
+                  <version>${project.version}</version>
+                  <classifier>test-sources</classifier>
+                  <outputDirectory>${dir.unpacked-sources.json-object-shared-test}</outputDirectory>
+                  <includes>${package.path}/shared/**/*.java</includes>
+                  <overWrite>true</overWrite>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
