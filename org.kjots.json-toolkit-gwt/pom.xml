@@ -20,13 +20,15 @@
   <modelVersion>4.0.0</modelVersion>
   
   <parent>
-    <groupId>org.kjots.json-toolkit-gwt</groupId>
-    <artifactId>maven-parent</artifactId>
-    <version>1.2-SNAPSHOT</version>
-    <relativePath>../org.kjots.json-toolkit-gwt.maven-parent/pom.xml</relativePath>
+    <groupId>org.kjots.maven-lib</groupId>
+    <artifactId>maven-gwt-base-pom</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <relativePath/>
   </parent>
   
+  <groupId>org.kjots.json-toolkit-gwt</groupId>
   <artifactId>org.kjots.json-toolkit-gwt</artifactId>
+  <version>1.2-SNAPSHOT</version>
   
   <packaging>pom</packaging>
   
@@ -39,28 +41,76 @@
     </license>
   </licenses>
   
-  <modules>
-    <module>../org.kjots.json-toolkit-gwt.maven-parent</module>
-    <module>../org.kjots.json-toolkit-gwt.json-content-gwt</module>
-    <module>../org.kjots.json-toolkit-gwt.json-object-gwt</module>
-    <module>../org.kjots.json-toolkit-gwt.json-object-gwt-pre-2.2</module>
-  </modules>
+  <repositories>
+    <repository>
+      <id>org.kjots.maven-releases</id>
+      <name>kjots.org Maven Releases</name>
+      <url>http://kjots-org-maven-repository.googlecode.com/svn/repositories/releases</url>
+    </repository>
+    <repository>
+      <id>org.kjots.maven-snapshots</id>
+      <name>kjots.org Maven Snapshots</name>
+      <url>http://kjots-org-maven-repository.googlecode.com/svn/repositories/snapshots/</url>
+    </repository>
+    <repository>
+      <id>org.kjots.maven-third-party</id>
+      <name>kjots.org Maven Third-Party</name>
+      <url>http://kjots-org-maven-repository.googlecode.com/svn/repositories/third-party/</url>
+    </repository>
+  </repositories>
+  
+  <properties>
+    <version.guice>3.0</version.guice>
+    <version.gin>1.5.0</version.gin>
+    
+    <version.junit>4.8.2</version.junit>
+  </properties>
   
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>${version.plugin.maven-source}</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <inherited>true</inherited>
+          </execution>
+        </executions>
+      </plugin>
+      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>${version.plugin.maven-javadoc}</version>
         <executions>
           <execution>
-            <phase>install</phase>
+            <phase>package</phase>
+            <goals>
+              <goal>jar</goal>
+            </goals>
+            <inherited>true</inherited>
+          </execution>
+          <execution>
+            <id>aggregate</id>
+            <phase>package</phase>
             <goals>
               <goal>aggregate</goal>
             </goals>
+            <inherited>false</inherited>
           </execution>
         </executions>
       </plugin>
     </plugins>
   </build>
+  
+  <modules>
+    <module>../org.kjots.json-toolkit-gwt.json-content-gwt</module>
+    <module>../org.kjots.json-toolkit-gwt.json-object-gwt</module>
+    <module>../org.kjots.json-toolkit-gwt.json-object-gwt-pre-2.2</module>
+  </modules>
 </project>

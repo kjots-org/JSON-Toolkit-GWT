@@ -21,9 +21,9 @@
   
   <parent>
     <groupId>org.kjots.json-toolkit-gwt</groupId>
-    <artifactId>maven-parent</artifactId>
+    <artifactId>org.kjots.json-toolkit-gwt</artifactId>
     <version>1.2-SNAPSHOT</version>
-    <relativePath>../org.kjots.json-toolkit-gwt.maven-parent/pom.xml</relativePath>
+    <relativePath>../org.kjots.json-toolkit-gwt/pom.xml</relativePath>
   </parent>
   
   <artifactId>json-content-gwt</artifactId>
