@@ -32,73 +32,17 @@
   
   <name>JSON Toolkit GWT - JSON Content GWT</name>
   
-  <properties>
-    <dir.unpacked-sources.json-content-shared>${project.build.directory}/unpacked-sources/json-content-shared</dir.unpacked-sources.json-content-shared>
-    
-    <package>org.kjots.json.content</package>
-    <package.path>org/kjots/json/content</package.path>
-    
-    <gwt.module.name>JsonContent</gwt.module.name>
-    <gwt.module>${package}.${gwt.module.name}</gwt.module>
-  </properties>
-  
   <dependencies>
     <dependency>
       <groupId>org.kjots.json-toolkit</groupId>
       <artifactId>json-content.shared</artifactId>
       <version>${project.version}</version>
-      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.kjots.json-toolkit</groupId>
+      <artifactId>json-content.shared</artifactId>
+      <version>${project.version}</version>
+      <classifier>sources</classifier>
     </dependency>
   </dependencies>
-  
-  <build>
-    <resources>
-      <resource>
-        <directory>src/main/gwt</directory>
-        <includes>
-          <include>${package.path}/**</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>${dir.unpacked-sources.json-content-shared}</directory>
-        <includes>
-          <include>${package.path}/shared/**/*.java</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>src/main/java</directory>
-        <includes>
-          <include>${package.path}/gwt/client/**/*.java</include>
-        </includes>
-      </resource>
-    </resources>
-    
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>unpack</goal>
-            </goals>
-            <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>org.kjots.json-toolkit</groupId>
-                  <artifactId>json-content.shared</artifactId>
-                  <version>${project.version}</version>
-                  <classifier>sources</classifier>
-                  <outputDirectory>${dir.unpacked-sources.json-content-shared}</outputDirectory>
-                  <includes>${package.path}/shared/**/*.java</includes>
-                  <overWrite>true</overWrite>
-                </artifactItem>
-              </artifactItems>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
 </project>

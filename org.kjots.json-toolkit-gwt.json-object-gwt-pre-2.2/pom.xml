@@ -33,19 +33,10 @@
   <name>JSON Toolkit GWT - JSON Object GWT (pre 2.2)</name>
   
   <properties>
-    <dir.unpacked-sources.json-object-shared>${project.build.directory}/unpacked-sources/json-object-shared</dir.unpacked-sources.json-object-shared>
-    <dir.unpacked-sources.json-object-shared-test>${project.build.directory}/unpacked-sources/json-object-shared-test</dir.unpacked-sources.json-object-shared-test>
-    
     <version.gwt>2.1.1</version.gwt>
     <version.gin>1.5-pre-gwt-2.2</version.gin>
     
     <version.plugin.gwt>2.1.0-1</version.plugin.gwt>
-    
-    <package>org.kjots.json.object</package>
-    <package.path>org/kjots/json/object</package.path>
-    
-    <gwt.module.name>JsonObject</gwt.module.name>
-    <gwt.module>${package}.${gwt.module.name}</gwt.module>
   </properties>
   
   <dependencies>
@@ -53,19 +44,22 @@
       <groupId>org.kjots.json-toolkit-gwt</groupId>
       <artifactId>json-content-gwt</artifactId>
       <version>${project.version}</version>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>org.kjots.json-toolkit</groupId>
       <artifactId>json-object.shared</artifactId>
       <version>${project.version}</version>
-      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.kjots.json-toolkit</groupId>
+      <artifactId>json-object.shared</artifactId>
+      <version>${project.version}</version>
+      <classifier>sources</classifier>
     </dependency>
     <dependency>
       <groupId>com.google.gwt</groupId>
       <artifactId>gwt-user</artifactId>
       <version>${version.gwt}</version>
-      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.google.gwt</groupId>
@@ -87,6 +81,14 @@
       <scope>test</scope>
     </dependency>
     <dependency>
+      <groupId>org.kjots.json-toolkit</groupId>
+      <artifactId>json-object.shared</artifactId>
+      <version>${project.version}</version>
+      <classifier>test-sources</classifier>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>${version.junit}</version>
@@ -97,78 +99,23 @@
   <build>
     <sourceDirectory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/main/java</sourceDirectory>
     <testSourceDirectory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/test/java</testSourceDirectory>
-  
+    
     <resources>
       <resource>
         <directory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/main/gwt</directory>
-        <includes>
-          <include>${package.path}/**</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>${dir.unpacked-sources.json-object-shared}</directory>
-        <includes>
-          <include>${package.path}/shared/**/*.java</include>
-        </includes>
       </resource>
       <resource>
         <directory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/main/java</directory>
-        <includes>
-          <include>${package.path}/gwt/client/**/*.java</include>
-        </includes>
       </resource>
     </resources> 
     
     <testResources>
       <testResource>
         <directory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/test/gwt</directory>
-        <includes>
-          <include>${package.path}/**</include>
-        </includes>
       </testResource>
       <testResource>
-        <directory>${dir.unpacked-sources.json-object-shared-test}</directory>
-        <includes>
-          <include>${package.path}/shared/**/*.java</include>
-        </includes>
+        <directory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/test/java</directory>
       </testResource>
     </testResources>
-    
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>generate-sources</phase>
-            <goals>
-              <goal>unpack</goal>
-            </goals>
-            <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>org.kjots.json-toolkit</groupId>
-                  <artifactId>json-object.shared</artifactId>
-                  <version>${project.version}</version>
-                  <classifier>sources</classifier>
-                  <outputDirectory>${dir.unpacked-sources.json-object-shared}</outputDirectory>
-                  <includes>${package.path}/shared/**/*.java</includes>
-                  <overWrite>true</overWrite>
-                </artifactItem>
-                <artifactItem>
-                  <groupId>org.kjots.json-toolkit</groupId>
-                  <artifactId>json-object.shared</artifactId>
-                  <version>${project.version}</version>
-                  <classifier>test-sources</classifier>
-                  <outputDirectory>${dir.unpacked-sources.json-object-shared-test}</outputDirectory>
-                  <includes>${package.path}/shared/**/*.java</includes>
-                  <overWrite>true</overWrite>
-                </artifactItem>
-              </artifactItems>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins> 
   </build>
 </project>

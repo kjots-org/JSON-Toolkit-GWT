@@ -64,10 +64,6 @@
     <version.gin>1.5.0</version.gin>
     
     <version.junit>4.8.2</version.junit>
-    
-    <version.plugin.maven-dependency>2.3</version.plugin.maven-dependency>
-    
-    <version.plugin.m2e-lifecycle-mapping>1.0.0</version.plugin.m2e-lifecycle-mapping>
   </properties>
   
   <dependencies>
@@ -80,41 +76,6 @@
   </dependencies>
   
   <build>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-dependency-plugin</artifactId>
-          <version>${version.plugin.maven-dependency}</version>
-        </plugin>
-        
-        <plugin>
-          <groupId>org.eclipse.m2e</groupId>
-          <artifactId>lifecycle-mapping</artifactId>
-          <version>${version.plugin.m2e-lifecycle-mapping}</version>
-          <configuration>
-            <lifecycleMappingMetadata>
-              <pluginExecutions>
-                <pluginExecution>
-                  <pluginExecutionFilter>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-dependency-plugin</artifactId>
-                    <versionRange>${version.plugin.maven-dependency}</versionRange>
-                    <goals>
-                      <goal>unpack</goal>
-                    </goals>
-                  </pluginExecutionFilter>
-                  <action>
-                    <ignore/>
-                  </action>
-                </pluginExecution>
-              </pluginExecutions>
-            </lifecycleMappingMetadata>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-    
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
