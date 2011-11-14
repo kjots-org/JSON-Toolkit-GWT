@@ -77,7 +77,6 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>${version.plugin.maven-dependency}</version>
         <executions>
           <execution>
             <phase>generate-sources</phase>
