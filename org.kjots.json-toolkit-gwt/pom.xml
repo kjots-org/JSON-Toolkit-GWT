@@ -19,13 +19,6 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   
-  <parent>
-    <groupId>org.kjots.maven-lib</groupId>
-    <artifactId>maven-gwt-base-pom</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <relativePath/>
-  </parent>
-  
   <groupId>org.kjots.json-toolkit-gwt</groupId>
   <artifactId>org.kjots.json-toolkit-gwt</artifactId>
   <version>1.2-SNAPSHOT</version>
@@ -40,6 +33,32 @@
       <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
     </license>
   </licenses>
+  
+  <developers>
+    <developer>
+      <id>kjots</id>
+      <name>Karl J. Ots</name>
+      <email>kjots@kjots.org</email>
+      <roles>
+        <role>owner</role>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+  
+  <distributionManagement>
+    <repository>
+      <id>kjots.org-releases</id>
+      <name>kjots.org Releases</name>
+      <url>${url.kjots.org-releases.deploy}</url>
+    </repository>
+    <snapshotRepository>
+      <id>kjots.org-snapshots</id>
+      <name>kjots.org Snapshots</name>
+      <url>${url.kjots.org-snapshots.deploy}</url>
+    </snapshotRepository>
+  </distributionManagement>
   
   <repositories>
     <repository>
@@ -60,26 +79,180 @@
   </repositories>
   
   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    
+    <maven.compiler.source>1.6</maven.compiler.source>
+    <maven.compiler.target>1.6</maven.compiler.target>
+    
+    <version.gwt>2.4.0</version.gwt>
     <version.guice>3.0</version.guice>
     <version.gin>1.5.0</version.gin>
     
     <version.junit>4.8.2</version.junit>
+    
+    <version.plugin.maven-surefire>2.8</version.plugin.maven-surefire>
+    <version.plugin.maven-failsafe>2.8</version.plugin.maven-failsafe>
+    <version.plugin.maven-source>2.1.2</version.plugin.maven-source>
+    <version.plugin.maven-javadoc>2.7</version.plugin.maven-javadoc>
+    <version.plugin.gwt>2.4.0</version.plugin.gwt>
+    
+    <version.plugin.emma>1.0-alpha-3</version.plugin.emma>
   </properties>
   
   <dependencies>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+      <version>${version.gwt}</version>
+    </dependency>
     <dependency>
       <groupId>com.google.gwt</groupId>
       <artifactId>gwt-dev</artifactId>
       <version>${version.gwt}</version>
       <scope>provided</scope>
     </dependency>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-servlet</artifactId>
+      <version>${version.gwt}</version>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
   
   <build>
+    <resources>
+      <resource>
+        <directory>src/main/gwt</directory>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+      </resource>
+    </resources>
+    
+    <testResources>
+      <testResource>
+        <directory>src/test/gwt</directory>
+      </testResource>
+      <testResource>
+        <directory>src/test/java</directory>
+      </testResource>
+    </testResources>
+    
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${version.plugin.maven-surefire}</version>
+          <configuration>
+            <includes>
+              <include>**/*TestSuite.class</include>
+            </includes>
+            <systemPropertyVariables>
+              <gwt.args>-war ${project.build.directory}/www-test</gwt.args>
+              <emma.rt.control>false</emma.rt.control>
+            </systemPropertyVariables>       
+            <useManifestOnlyJar>false</useManifestOnlyJar>
+          </configuration>
+        </plugin>
+        
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-failsafe-plugin</artifactId>
+          <version>${version.plugin.maven-failsafe}</version>
+          <configuration>
+            <includes>
+              <include>**/*GwtTestSuite.java</include>
+            </includes>
+            <systemPropertyVariables>
+              <gwt.args>-war ${project.build.directory}/www-test -prod</gwt.args>
+            </systemPropertyVariables>
+            <useManifestOnlyJar>false</useManifestOnlyJar>
+          </configuration>
+          <executions>
+            <execution>
+              <id>integration-test</id>
+              <goals>
+                <goal>integration-test</goal>
+              </goals>
+            </execution>          
+            <execution>
+              <id>verify</id>
+              <goals>
+                <goal>verify</goal>
+              </goals>
+            </execution>          
+          </executions>
+        </plugin>
+        
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>gwt-maven-plugin</artifactId>
+          <version>${version.plugin.gwt}</version>
+        </plugin>
+        
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-source-plugin</artifactId>
+          <version>${version.plugin.maven-source}</version>
+          <executions>
+            <execution>
+              <id>jar</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+              <phase>package</phase>
+            </execution>
+          </executions>
+        </plugin>
+        
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-javadoc-plugin</artifactId>
+          <version>${version.plugin.maven-javadoc}</version>
+          <executions>
+            <execution>
+              <id>jar</id>
+              <goals>
+                <goal>jar</goal>
+              </goals>
+              <phase>package</phase>
+            </execution>
+          </executions>
+        </plugin>
+        
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>emma-maven-plugin</artifactId>
+          <version>${version.plugin.emma}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+    
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <inherited>true</inherited>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>gwt-maven-plugin</artifactId>
+        <inherited>true</inherited>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <inherited>true</inherited>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
+        <inherited>true</inherited>
         <executions>
           <execution>
             <id>aggregate</id>
@@ -90,6 +263,12 @@
             <inherited>false</inherited>
           </execution>
         </executions>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>emma-maven-plugin</artifactId>
+        <inherited>true</inherited>
       </plugin>
     </plugins>
   </build>
