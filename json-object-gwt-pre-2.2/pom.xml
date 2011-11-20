@@ -39,51 +39,68 @@
     <version.plugin.gwt>2.1.0-1</version.plugin.gwt>
   </properties>
   
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-user</artifactId>
+        <version>${version.gwt}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-dev</artifactId>
+        <version>${version.gwt}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.gwt</groupId>
+        <artifactId>gwt-servlet</artifactId>
+        <version>${version.gwt}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.gwt.inject</groupId>
+        <artifactId>gin</artifactId>
+        <version>${version.gin}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+  
   <dependencies>
     <dependency>
       <groupId>org.kjots.json-toolkit-gwt</groupId>
       <artifactId>json-content-gwt</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.kjots.json-toolkit</groupId>
       <artifactId>json-object.shared</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.kjots.json-toolkit</groupId>
       <artifactId>json-object.shared</artifactId>
-      <version>${project.version}</version>
       <classifier>sources</classifier>
     </dependency>
     <dependency>
       <groupId>com.google.gwt</groupId>
       <artifactId>gwt-user</artifactId>
-      <version>${version.gwt}</version>
     </dependency>
     <dependency>
       <groupId>com.google.gwt</groupId>
       <artifactId>gwt-dev</artifactId>
-      <version>${version.gwt}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>com.google.gwt.inject</groupId>
       <artifactId>gin</artifactId>
-      <version>${version.gin}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.kjots.json-toolkit</groupId>
       <artifactId>json-object.shared</artifactId>
-      <version>${project.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.kjots.json-toolkit</groupId>
       <artifactId>json-object.shared</artifactId>
-      <version>${project.version}</version>
       <classifier>test-sources</classifier>
       <type>test-jar</type>
       <scope>test</scope>
@@ -91,7 +108,6 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>${version.junit}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -117,5 +133,15 @@
         <directory>../json-object-gwt/src/test/java</directory>
       </testResource>
     </testResources>
+    
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>gwt-maven-plugin</artifactId>
+          <version>${version.plugin.gwt}</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 </project>

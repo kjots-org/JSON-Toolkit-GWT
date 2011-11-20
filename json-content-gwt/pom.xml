@@ -36,12 +36,10 @@
     <dependency>
       <groupId>org.kjots.json-toolkit</groupId>
       <artifactId>json-content.shared</artifactId>
-      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>org.kjots.json-toolkit</groupId>
       <artifactId>json-content.shared</artifactId>
-      <version>${project.version}</version>
       <classifier>sources</classifier>
     </dependency>
   </dependencies>
