@@ -98,7 +98,6 @@
     
     <version.plugin.maven-surefire>2.8</version.plugin.maven-surefire>
     <version.plugin.maven-failsafe>2.8</version.plugin.maven-failsafe>
-    <version.plugin.maven-source>2.1.2</version.plugin.maven-source>
     <version.plugin.maven-javadoc>2.7</version.plugin.maven-javadoc>
     <version.plugin.maven-site>3.0</version.plugin.maven-site>
     <version.plugin.maven-project-info-reports>2.4</version.plugin.maven-project-info-reports>
@@ -278,21 +277,6 @@
         
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-source-plugin</artifactId>
-          <version>${version.plugin.maven-source}</version>
-          <executions>
-            <execution>
-              <id>jar</id>
-              <goals>
-                <goal>jar</goal>
-              </goals>
-              <phase>package</phase>
-            </execution>
-          </executions>
-        </plugin>
-        
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <version>${version.plugin.maven-javadoc}</version>
           <executions>
@@ -339,12 +323,6 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>gwt-maven-plugin</artifactId>
-        <inherited>true</inherited>
-      </plugin>
-      
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
         <inherited>true</inherited>
       </plugin>
       
