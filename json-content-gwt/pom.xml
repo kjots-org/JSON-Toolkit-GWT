@@ -30,6 +30,7 @@
   <packaging>jar</packaging>
   
   <name>JSON Toolkit GWT - JSON Content GWT</name>
+  <description>JSON Toolkit GWT - JSON Content GWT</description>
   
   <dependencies>
     <dependency>

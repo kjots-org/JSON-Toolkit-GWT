@@ -26,6 +26,8 @@
   <packaging>pom</packaging>
   
   <name>JSON Toolkit GWT</name>
+  <description>JSON Toolkit GWT</description>
+  <url>http://dev.kjots.org/JSON-Toolkit-GWT/</url>
   
   <licenses>
     <license>
