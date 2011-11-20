@@ -27,7 +27,7 @@
   
   <name>JSON Toolkit GWT</name>
   <description>JSON Toolkit GWT</description>
-  <url>http://kjots.org/JSON-Toolkit-GWT/</url>
+  <url>http://kjots.org/json-toolkit-gwt/</url>
   
   <licenses>
     <license>
@@ -37,14 +37,14 @@
   </licenses>
   
   <scm>
-    <connection>scm:git:https://github.com/kjots-org/JSON-Toolkit-GWT.git</connection>
-    <developerConnection>scm:git:https://github.com/kjots-org/JSON-Toolkit-GWT.git</developerConnection>
-    <url>https://github.com/kjots-org/JSON-Toolkit-GWT/tree/master/</url>
+    <connection>scm:git:https://github.com/kjots-org/json-toolkit-gwt.git</connection>
+    <developerConnection>scm:git:https://github.com/kjots-org/json-toolkit-gwt.git</developerConnection>
+    <url>https://github.com/kjots-org/json-toolkit-gwt/tree/master/</url>
   </scm>
   
   <issueManagement>
     <system>GitHub</system>
-    <url>https://github.com/kjots-org/JSON-Toolkit-GWT/issues</url>
+    <url>https://github.com/kjots-org/json-toolkit-gwt/issues</url>
   </issueManagement>
   
   <distributionManagement>
@@ -61,7 +61,7 @@
     <site>
       <id>kjots.org-json-toolkit-gwt-site</id>
       <name>kjots.org JSON Toolkit GWT Site</name>
-      <url>http://kjots.org/JSON-Toolkit-GWT/</url>
+      <url>http://kjots.org/json-toolkit-gwt/</url>
     </site>
   </distributionManagement>
   
