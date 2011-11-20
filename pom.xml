@@ -274,8 +274,8 @@
   </build>
   
   <modules>
-    <module>../org.kjots.json-toolkit-gwt.json-content-gwt</module>
-    <module>../org.kjots.json-toolkit-gwt.json-object-gwt</module>
-    <module>../org.kjots.json-toolkit-gwt.json-object-gwt-pre-2.2</module>
+    <module>json-content-gwt</module>
+    <module>json-object-gwt</module>
+    <module>json-object-gwt-pre-2.2</module>
   </modules>
 </project>

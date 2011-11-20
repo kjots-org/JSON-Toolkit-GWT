@@ -23,7 +23,6 @@
     <groupId>org.kjots.json-toolkit-gwt</groupId>
     <artifactId>org.kjots.json-toolkit-gwt</artifactId>
     <version>1.2-SNAPSHOT</version>
-    <relativePath>../org.kjots.json-toolkit-gwt/pom.xml</relativePath>
   </parent>
   
   <artifactId>json-object-gwt-pre-2.2</artifactId>
@@ -97,24 +96,24 @@
   </dependencies>
   
   <build>
-    <sourceDirectory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/main/java</sourceDirectory>
-    <testSourceDirectory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/test/java</testSourceDirectory>
+    <sourceDirectory>../json-object-gwt/src/main/java</sourceDirectory>
+    <testSourceDirectory>../json-object-gwt/src/test/java</testSourceDirectory>
     
     <resources>
       <resource>
-        <directory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/main/gwt</directory>
+        <directory>../json-object-gwt/src/main/gwt</directory>
       </resource>
       <resource>
-        <directory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/main/java</directory>
+        <directory>../json-object-gwt/src/main/java</directory>
       </resource>
     </resources> 
     
     <testResources>
       <testResource>
-        <directory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/test/gwt</directory>
+        <directory>../json-object-gwt/src/test/gwt</directory>
       </testResource>
       <testResource>
-        <directory>../org.kjots.json-toolkit-gwt.json-object-gwt/src/test/java</directory>
+        <directory>../json-object-gwt/src/test/java</directory>
       </testResource>
     </testResources>
   </build>
