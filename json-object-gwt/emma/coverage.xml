@@ -1,0 +1,994 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- EMMA v2.1.5320 (stable) report, generated Sat Dec 17 18:54:17 EST 2011 -->
+
+<report>
+  <stats>
+    <packages value="3"/>
+    <classes value="25"/>
+    <methods value="136"/>
+    <srcfiles value="14"/>
+    <srclines value="664"/>
+  </stats>
+  <data>
+    <all name="all classes">
+      <coverage type="class, %" value="100% (25/25)"/>
+      <coverage type="method, %" value="99%  (134/136)"/>
+      <coverage type="block, %" value="89%  (3436/3871)"/>
+      <coverage type="line, %" value="89%  (591.8/664)"/>
+
+      <package name="org.kjots.json.object.gwt.rebind">
+        <coverage type="class, %" value="100% (3/3)"/>
+        <coverage type="method, %" value="100% (36/36)"/>
+        <coverage type="block, %" value="87%  (2703/3095)"/>
+        <coverage type="line, %" value="87%  (416.9/478)"/>
+
+        <srcfile name="GwtJsonObjectGenerator.java">
+          <coverage type="class, %" value="100% (2/2)"/>
+          <coverage type="method, %" value="100% (30/30)"/>
+          <coverage type="block, %" value="86%  (2337/2712)"/>
+          <coverage type="line, %" value="86%  (355.9/415)"/>
+
+          <class name="GwtJsonObjectGenerator">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (29/29)"/>
+            <coverage type="block, %" value="86%  (2302/2672)"/>
+            <coverage type="line, %" value="86%  (356/415)"/>
+
+            <method name="getType (TreeLogger, GeneratorContext, String): JClassType">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="23%  (5/22)"/>
+              <coverage type="line, %" value="25%  (1/4)"/>
+            </method>
+            <method name="writeDeletePropertyMethod (SourceWriter, TreeLogger, JMethod, JsonProperty): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="39%  (22/56)"/>
+              <coverage type="line, %" value="60%  (6/10)"/>
+            </method>
+            <method name="writeHasPropertyMethod (SourceWriter, TreeLogger, JMethod, JsonProperty): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="39%  (22/56)"/>
+              <coverage type="line, %" value="60%  (6/10)"/>
+            </method>
+            <method name="writeIsNullPropertyMethod (SourceWriter, TreeLogger, JMethod, JsonProperty): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="39%  (22/56)"/>
+              <coverage type="line, %" value="60%  (6/10)"/>
+            </method>
+            <method name="getImplementedInterface (JClassType, String): JClassType">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="45%  (22/49)"/>
+              <coverage type="line, %" value="24%  (2.9/12)"/>
+            </method>
+            <method name="writePropertyMethod (SourceWriter, TreeLogger, GeneratorContext, JMethod, JsonProperty): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="68%  (43/63)"/>
+              <coverage type="line, %" value="85%  (11/13)"/>
+            </method>
+            <method name="generate (TreeLogger, GeneratorContext, String): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="76%  (201/265)"/>
+              <coverage type="line, %" value="82%  (33/40)"/>
+            </method>
+            <method name="toQuotedString (String): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="79%  (33/42)"/>
+              <coverage type="line, %" value="73%  (8/11)"/>
+            </method>
+            <method name="writeExceptionMethod (SourceWriter, TreeLogger, GeneratorContext, JMethod, JsonException): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="79%  (123/156)"/>
+              <coverage type="line, %" value="74%  (20/27)"/>
+            </method>
+            <method name="getArrayTypeName (JArrayType): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="83%  (40/48)"/>
+              <coverage type="line, %" value="73%  (11/15)"/>
+            </method>
+            <method name="writeSetPropertyMethod (SourceWriter, TreeLogger, GeneratorContext, JMethod, JsonProperty): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="88%  (248/282)"/>
+              <coverage type="line, %" value="90%  (38/42)"/>
+            </method>
+            <method name="writeGetAdaptedPropertyMethod (SourceWriter, TreeLogger, GeneratorContext, String, String, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="92%  (187/203)"/>
+              <coverage type="line, %" value="91%  (20/22)"/>
+            </method>
+            <method name="writeGetPropertyMethod (SourceWriter, TreeLogger, GeneratorContext, JMethod, JsonProperty): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="93%  (276/296)"/>
+              <coverage type="line, %" value="93%  (42/45)"/>
+            </method>
+            <method name="writeSetAdaptedPropertyMethod (SourceWriter, TreeLogger, GeneratorContext, String, String, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="94%  (274/290)"/>
+              <coverage type="line, %" value="93%  (26/28)"/>
+            </method>
+            <method name="writeFunctionMethod (SourceWriter, TreeLogger, GeneratorContext, JMethod, JsonFunction): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="98%  (167/171)"/>
+              <coverage type="line, %" value="97%  (28/29)"/>
+            </method>
+            <method name="GwtJsonObjectGenerator (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="getTypeName (JType): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (20/20)"/>
+              <coverage type="line, %" value="100% (6/6)"/>
+            </method>
+            <method name="writeDeletePropertyMethod (SourceWriter, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (35/35)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="writeGetJavaCharacterPrimitivePropertyMethod (SourceWriter, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (61/61)"/>
+              <coverage type="line, %" value="100% (9/9)"/>
+            </method>
+            <method name="writeGetJavaPrimitivePropertyMethod (SourceWriter, String, String, String, String, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (75/75)"/>
+              <coverage type="line, %" value="100% (9/9)"/>
+            </method>
+            <method name="writeGetJsonPrimitivePropertyMethod (SourceWriter, String, String, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (43/43)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="writeGetObjectCompositePropertyMethod (SourceWriter, String, String, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (71/71)"/>
+              <coverage type="line, %" value="100% (9/9)"/>
+            </method>
+            <method name="writeGetObjectPropertyMethod (SourceWriter, String, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (43/43)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="writeHasPropertyMethod (SourceWriter, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (35/35)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="writeIsNullPropertyMethod (SourceWriter, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (35/35)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="writeSetJavaCharacterPrimitivePropertyMethod (SourceWriter, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (43/43)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="writeSetJavaPrimitivePropertyMethod (SourceWriter, String, String, String, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (55/55)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="writeSetJsonPrimitivePropertyMethod (SourceWriter, String, String, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (51/51)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="writeSetObjectPropertyMethod (SourceWriter, String, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (47/47)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectGenerator$1">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (1/1)"/>
+            <coverage type="block, %" value="88%  (35/40)"/>
+            <coverage type="line, %" value="87%  (0.9/1)"/>
+
+            <method name="&lt;static initializer&gt;">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="88%  (35/40)"/>
+              <coverage type="line, %" value="87%  (0.9/1)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonObjectFactoryGenerator.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (6/6)"/>
+          <coverage type="block, %" value="96%  (366/383)"/>
+          <coverage type="line, %" value="97%  (61/63)"/>
+
+          <class name="GwtJsonObjectFactoryGenerator">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (6/6)"/>
+            <coverage type="block, %" value="96%  (366/383)"/>
+            <coverage type="line, %" value="97%  (61/63)"/>
+
+            <method name="generate (TreeLogger, GeneratorContext, String): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="88%  (125/142)"/>
+              <coverage type="line, %" value="92%  (22/24)"/>
+            </method>
+            <method name="GwtJsonObjectFactoryGenerator (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getJsonObjectImplClasses (TreeLogger, GeneratorContext): Map">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (76/76)"/>
+              <coverage type="line, %" value="100% (11/11)"/>
+            </method>
+            <method name="getJsonPropertyAdapterClasses (TreeLogger, GeneratorContext): Set">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (43/43)"/>
+              <coverage type="line, %" value="100% (7/7)"/>
+            </method>
+            <method name="writeJsonObjectInstantiator (SourceWriter, String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (64/64)"/>
+              <coverage type="line, %" value="100% (10/10)"/>
+            </method>
+            <method name="writeJsonPropertyAdapterInstantiator (SourceWriter, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (55/55)"/>
+              <coverage type="line, %" value="100% (10/10)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+      <package name="org.kjots.json.object.gwt.client.impl">
+        <coverage type="class, %" value="100% (21/21)"/>
+        <coverage type="method, %" value="98%  (96/98)"/>
+        <coverage type="block, %" value="94%  (708/751)"/>
+        <coverage type="line, %" value="94%  (169.9/181)"/>
+
+        <srcfile name="GwtJsonArrayImpl.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (8/8)"/>
+          <coverage type="block, %" value="83%  (73/88)"/>
+          <coverage type="line, %" value="84%  (20.9/25)"/>
+
+          <class name="GwtJsonArrayImpl">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (8/8)"/>
+            <coverage type="block, %" value="83%  (73/88)"/>
+            <coverage type="line, %" value="84%  (20.9/25)"/>
+
+            <method name="insertObjectElement (int, JsonObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="71%  (10/14)"/>
+              <coverage type="line, %" value="75%  (3/4)"/>
+            </method>
+            <method name="setObjectElement (int, JsonObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="71%  (10/14)"/>
+              <coverage type="line, %" value="75%  (3/4)"/>
+            </method>
+            <method name="appendObjectElement (JsonObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="75%  (9/12)"/>
+              <coverage type="line, %" value="75%  (3/4)"/>
+            </method>
+            <method name="prependObjectElement (JsonObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="75%  (9/12)"/>
+              <coverage type="line, %" value="75%  (3/4)"/>
+            </method>
+            <method name="getObjectElement (int, Class): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="92%  (12/13)"/>
+              <coverage type="line, %" value="96%  (1.9/2)"/>
+            </method>
+            <method name="GwtJsonArrayImpl (Class, JavaScriptObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (13/13)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+            <method name="GwtJsonArrayImpl (JavaScriptObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="getObjectElement (int): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonObjectImpl.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="92%  (12/13)"/>
+          <coverage type="block, %" value="92%  (119/129)"/>
+          <coverage type="line, %" value="88%  (30/34)"/>
+
+          <class name="GwtJsonObjectImpl">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="92%  (12/13)"/>
+            <coverage type="block, %" value="92%  (119/129)"/>
+            <coverage type="line, %" value="88%  (30/34)"/>
+
+            <method name="toString (): String">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/4)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="cast (Class): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="85%  (11/13)"/>
+              <coverage type="line, %" value="67%  (2/3)"/>
+            </method>
+            <method name="cast (String): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="86%  (12/14)"/>
+              <coverage type="line, %" value="67%  (2/3)"/>
+            </method>
+            <method name="equals (Object): boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="89%  (17/19)"/>
+              <coverage type="line, %" value="83%  (5/6)"/>
+            </method>
+            <method name="GwtJsonObjectImpl (Class, JavaScriptObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (9/9)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+            <method name="GwtJsonObjectImpl (JavaScriptObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="getJsonObjectClass (): Class">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getObject (): JavaScriptObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getObjectProperty (String): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getObjectProperty (String, Class): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (13/13)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="getPropertyNames (): Set">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (23/23)"/>
+              <coverage type="line, %" value="100% (5/5)"/>
+            </method>
+            <method name="hashCode (): int">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="setObjectProperty (String, JsonObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (14/14)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonObjectFactoryImplBase.java">
+          <coverage type="class, %" value="100% (11/11)"/>
+          <coverage type="method, %" value="97%  (32/33)"/>
+          <coverage type="block, %" value="94%  (283/301)"/>
+          <coverage type="line, %" value="93%  (39/42)"/>
+
+          <class name="GwtJsonObjectFactoryImplBase">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="92%  (12/13)"/>
+            <coverage type="block, %" value="90%  (165/183)"/>
+            <coverage type="line, %" value="91%  (29/32)"/>
+
+            <method name="createJsonArray (String): JsonArray">
+              <coverage type="method, %" value="0%   (0/1)"/>
+              <coverage type="block, %" value="0%   (0/7)"/>
+              <coverage type="line, %" value="0%   (0/1)"/>
+            </method>
+            <method name="getJsonPropertyAdapterInstantiator (Class): GwtJsonObjectFactoryImplBase$JsonPropertyAdapterInstantiator">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="65%  (11/17)"/>
+              <coverage type="line, %" value="67%  (2/3)"/>
+            </method>
+            <method name="getJsonObjectInstantiator (String): GwtJsonObjectFactoryImplBase$JsonObjectInstantiator">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="69%  (11/16)"/>
+              <coverage type="line, %" value="67%  (2/3)"/>
+            </method>
+            <method name="GwtJsonObjectFactoryImplBase (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (83/83)"/>
+              <coverage type="line, %" value="100% (14/14)"/>
+            </method>
+            <method name="createJsonArray (Class): JsonArray">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="createJsonObject (Class): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="createJsonObject (Class, Object): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="createJsonObject (String): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="createJsonObject (String, Object): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getJsonObjectInstantiator (Class): GwtJsonObjectFactoryImplBase$JsonObjectInstantiator">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="getJsonPropertyAdapter (Class): JsonPropertyAdapter">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="registerJsonObjectInstantiator (Class, GwtJsonObjectFactoryImplBase$JsonObjectInstantiator): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (8/8)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="registerJsonPropertyAdapterInstantiator (Class, GwtJsonObjectFactoryImplBase$JsonPropertyAdapterInstantiator): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectFactoryImplBase$1">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (11/11)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
+
+            <method name="GwtJsonObjectFactoryImplBase$1 (GwtJsonObjectFactoryImplBase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="newInstance (JavaScriptObject): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectFactoryImplBase$10">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (11/11)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
+
+            <method name="GwtJsonObjectFactoryImplBase$10 (GwtJsonObjectFactoryImplBase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="newInstance (JavaScriptObject): JsonObjectMap">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectFactoryImplBase$2">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (11/11)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
+
+            <method name="GwtJsonObjectFactoryImplBase$2 (GwtJsonObjectFactoryImplBase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="newInstance (JavaScriptObject): JsonArray">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectFactoryImplBase$3">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (13/13)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
+
+            <method name="GwtJsonObjectFactoryImplBase$3 (GwtJsonObjectFactoryImplBase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="newInstance (JavaScriptObject): JsonBooleanArray">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectFactoryImplBase$4">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (13/13)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
+
+            <method name="GwtJsonObjectFactoryImplBase$4 (GwtJsonObjectFactoryImplBase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="newInstance (JavaScriptObject): JsonNumberArray">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectFactoryImplBase$5">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (13/13)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
+
+            <method name="GwtJsonObjectFactoryImplBase$5 (GwtJsonObjectFactoryImplBase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="newInstance (JavaScriptObject): JsonStringArray">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectFactoryImplBase$6">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (13/13)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
+
+            <method name="GwtJsonObjectFactoryImplBase$6 (GwtJsonObjectFactoryImplBase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="newInstance (JavaScriptObject): JsonObjectArray">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (7/7)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectFactoryImplBase$7">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (11/11)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
+
+            <method name="GwtJsonObjectFactoryImplBase$7 (GwtJsonObjectFactoryImplBase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="newInstance (JavaScriptObject): JsonBooleanMap">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectFactoryImplBase$8">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (11/11)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
+
+            <method name="GwtJsonObjectFactoryImplBase$8 (GwtJsonObjectFactoryImplBase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="newInstance (JavaScriptObject): JsonNumberMap">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+          <class name="GwtJsonObjectFactoryImplBase$9">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (11/11)"/>
+            <coverage type="line, %" value="100% (2/2)"/>
+
+            <method name="GwtJsonObjectFactoryImplBase$9 (GwtJsonObjectFactoryImplBase): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="newInstance (JavaScriptObject): JsonStringMap">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonBooleanArrayImpl.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (7/7)"/>
+          <coverage type="block, %" value="100% (32/32)"/>
+          <coverage type="line, %" value="100% (12/12)"/>
+
+          <class name="GwtJsonBooleanArrayImpl">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (7/7)"/>
+            <coverage type="block, %" value="100% (32/32)"/>
+            <coverage type="line, %" value="100% (12/12)"/>
+
+            <method name="GwtJsonBooleanArrayImpl (JsArrayBoolean): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="append (Boolean): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="get (int): Boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="insert (int, Boolean): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="iterator (): Iterator">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="prepend (Boolean): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="set (int, Boolean): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonBooleanMapImpl.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (3/3)"/>
+          <coverage type="block, %" value="100% (14/14)"/>
+          <coverage type="line, %" value="100% (5/5)"/>
+
+          <class name="GwtJsonBooleanMapImpl">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (3/3)"/>
+            <coverage type="block, %" value="100% (14/14)"/>
+            <coverage type="line, %" value="100% (5/5)"/>
+
+            <method name="GwtJsonBooleanMapImpl (JavaScriptObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="get (String): Boolean">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="set (String, Boolean): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonNumberArrayImpl.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (7/7)"/>
+          <coverage type="block, %" value="100% (32/32)"/>
+          <coverage type="line, %" value="100% (12/12)"/>
+
+          <class name="GwtJsonNumberArrayImpl">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (7/7)"/>
+            <coverage type="block, %" value="100% (32/32)"/>
+            <coverage type="line, %" value="100% (12/12)"/>
+
+            <method name="GwtJsonNumberArrayImpl (JsArrayNumber): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="append (Number): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="get (int): Number">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="insert (int, Number): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="iterator (): Iterator">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="prepend (Number): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="set (int, Number): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonNumberMapImpl.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (3/3)"/>
+          <coverage type="block, %" value="100% (14/14)"/>
+          <coverage type="line, %" value="100% (5/5)"/>
+
+          <class name="GwtJsonNumberMapImpl">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (3/3)"/>
+            <coverage type="block, %" value="100% (14/14)"/>
+            <coverage type="line, %" value="100% (5/5)"/>
+
+            <method name="GwtJsonNumberMapImpl (JavaScriptObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="get (String): Number">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="set (String, Number): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonObjectArrayImpl.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (9/9)"/>
+          <coverage type="block, %" value="100% (57/57)"/>
+          <coverage type="line, %" value="100% (18/18)"/>
+
+          <class name="GwtJsonObjectArrayImpl">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (9/9)"/>
+            <coverage type="block, %" value="100% (57/57)"/>
+            <coverage type="line, %" value="100% (18/18)"/>
+
+            <method name="GwtJsonObjectArrayImpl (JsArray): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="GwtJsonObjectArrayImpl (JsArray, Class): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (8/8)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="append (JsonObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="castElement (Class): JsonObjectArray">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (15/15)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="get (int): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="insert (int, JsonObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="iterator (): Iterator">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="prepend (JsonObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="set (int, JsonObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonObjectMapImpl.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (5/5)"/>
+          <coverage type="block, %" value="100% (38/38)"/>
+          <coverage type="line, %" value="100% (11/11)"/>
+
+          <class name="GwtJsonObjectMapImpl">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (5/5)"/>
+            <coverage type="block, %" value="100% (38/38)"/>
+            <coverage type="line, %" value="100% (11/11)"/>
+
+            <method name="GwtJsonObjectMapImpl (JavaScriptObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="GwtJsonObjectMapImpl (JavaScriptObject, Class): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (8/8)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="castElement (Class): JsonObjectMap">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (14/14)"/>
+              <coverage type="line, %" value="100% (3/3)"/>
+            </method>
+            <method name="get (String): JsonObject">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (6/6)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="set (String, JsonObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonStringArrayImpl.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (7/7)"/>
+          <coverage type="block, %" value="100% (32/32)"/>
+          <coverage type="line, %" value="100% (12/12)"/>
+
+          <class name="GwtJsonStringArrayImpl">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (7/7)"/>
+            <coverage type="block, %" value="100% (32/32)"/>
+            <coverage type="line, %" value="100% (12/12)"/>
+
+            <method name="GwtJsonStringArrayImpl (JsArrayString): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="append (String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="get (int): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="insert (int, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="iterator (): Iterator">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="prepend (String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="set (int, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+        </srcfile>
+        <srcfile name="GwtJsonStringMapImpl.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (3/3)"/>
+          <coverage type="block, %" value="100% (14/14)"/>
+          <coverage type="line, %" value="100% (5/5)"/>
+
+          <class name="GwtJsonStringMapImpl">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (3/3)"/>
+            <coverage type="block, %" value="100% (14/14)"/>
+            <coverage type="line, %" value="100% (5/5)"/>
+
+            <method name="GwtJsonStringMapImpl (JavaScriptObject): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+            <method name="get (String): String">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (4/4)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="set (String, String): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (5/5)"/>
+              <coverage type="line, %" value="100% (2/2)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+      <package name="org.kjots.json.object.gwt.client">
+        <coverage type="class, %" value="100% (1/1)"/>
+        <coverage type="method, %" value="100% (2/2)"/>
+        <coverage type="block, %" value="100% (25/25)"/>
+        <coverage type="line, %" value="100% (5/5)"/>
+
+        <srcfile name="JsonObjectGinModule.java">
+          <coverage type="class, %" value="100% (1/1)"/>
+          <coverage type="method, %" value="100% (2/2)"/>
+          <coverage type="block, %" value="100% (25/25)"/>
+          <coverage type="line, %" value="100% (5/5)"/>
+
+          <class name="JsonObjectGinModule">
+            <coverage type="class, %" value="100% (1/1)"/>
+            <coverage type="method, %" value="100% (2/2)"/>
+            <coverage type="block, %" value="100% (25/25)"/>
+            <coverage type="line, %" value="100% (5/5)"/>
+
+            <method name="JsonObjectGinModule (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (3/3)"/>
+              <coverage type="line, %" value="100% (1/1)"/>
+            </method>
+            <method name="configure (): void">
+              <coverage type="method, %" value="100% (1/1)"/>
+              <coverage type="block, %" value="100% (22/22)"/>
+              <coverage type="line, %" value="100% (4/4)"/>
+            </method>
+          </class>
+        </srcfile>
+      </package>
+    </all>
+  </data>
+</report>
